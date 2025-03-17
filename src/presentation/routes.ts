@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { DecevalGatewayRoutes } from '../deceval/decevalgateway.routes';
+import { DecevalGatewayRoutes } from '../dian/diangateway.routes';
 
 
 
@@ -9,7 +9,7 @@ export class AppRoutes {
 
     
    
-    router.use(`/gateway/deceval`, DecevalGatewayRoutes.routes );
+    router.use(`/gateway/dian`, DecevalGatewayRoutes.routes );
 
     return router;
   }

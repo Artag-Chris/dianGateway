@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
-import { DecevalGatewayService } from "./decevalgateway.service";
-import { CustomError } from "../domain";
 
-export class DecevalGatewayController {
+import { CustomError } from "../domain";
+import { DianGatewayService } from "./diangateway.service";
+
+export class DianGatewayController {
   constructor(
-    private readonly decevalGatewayService = new DecevalGatewayService()
+    private readonly dianGatewayService = new DianGatewayService()
   ) {}
 
   private handleError = (error: unknown, res: Response) => {
@@ -18,7 +19,7 @@ export class DecevalGatewayController {
   createGirador = async (req: Request, res: Response) => {
     const payload = req.body;
     const { headerDTO, crearGiradorDTO } = payload;
-    this.decevalGatewayService
+    this.dianGatewayService
       .crearGirador(headerDTO, crearGiradorDTO)
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
@@ -27,7 +28,7 @@ export class DecevalGatewayController {
 
   consultGirador = async (req: Request, res: Response) => {
     const payload = req.body;
-    await this.decevalGatewayService
+    await this.dianGatewayService
       .consultGirador(payload)
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
@@ -38,7 +39,7 @@ export class DecevalGatewayController {
   pagaresFirmados = async (req: Request, res: Response) => {
     const payload = req.body;
     const { headerDTO, consultaPagareServiceDTO } = payload;
-    await this.decevalGatewayService
+    await this.dianGatewayService
       .consultarPagares(headerDTO,consultaPagareServiceDTO)
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
@@ -49,7 +50,7 @@ export class DecevalGatewayController {
     const payload = req.body;
    
     const { headerDTO,documentoPagareServiceDTO } = payload;
-    this.decevalGatewayService
+    this.dianGatewayService
       .crearPagare(headerDTO, documentoPagareServiceDTO)
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
