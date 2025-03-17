@@ -17,44 +17,13 @@ export class DianGatewayController {
   };
 
   // Métodos del controlador
-  createGirador = async (req: Request, res: Response) => {
+  createFactura = async (req: Request, res: Response) => {
     const payload = req.body;
     const {  } = payload;
     this.dianGatewayService
-      .crearGirador()
+      .createFactura()
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
   };
  
-
-  consultGirador = async (req: Request, res: Response) => {
-    const payload = req.body;
-    const {} =payload;
-    await this.dianGatewayService
-      .consultGirador()
-      .then((result) => res.json(result))
-      .catch((error) => this.handleError(error, res));
-  };
-
-
-
-  pagaresFirmados = async (req: Request, res: Response) => {
-    const payload = req.body;
-    const {  } = payload;
-    await this.dianGatewayService
-      .consultarPagares()
-      .then((result) => res.json(result))
-      .catch((error) => this.handleError(error, res));
-  };
-
-  // Nuevo método para crear pagaré
-  createPagare = async (req: Request, res: Response) => {
-    const payload = req.body;
-   
-    const {  } = payload;
-    this.dianGatewayService
-      .crearPagare()
-      .then((result) => res.json(result))
-      .catch((error) => this.handleError(error, res));
-  };
 }

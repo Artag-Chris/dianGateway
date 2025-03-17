@@ -12,15 +12,8 @@ export class DecevalGatewayRoutes {
     // Aquí irán las rutas de los servicios que usaremos de Deceval
     // Organizar rutas 
 
-    router.post(`/creargirador`, dianGatewayController.createGirador);
-    router.post(`/consultargirador`, dianGatewayController.consultGirador);
-    
-    router.post(`/pagaresfirmados`,dianGatewayController.pagaresFirmados);
-    
-     
+    router.post(`/crearfactura`, dianGatewayController.createFactura);
 
-    // Nueva ruta para crear pagaré
-    router.post(`/crearpagare`, dianGatewayController.createPagare);
 
     return router;
   }
