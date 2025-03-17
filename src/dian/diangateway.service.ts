@@ -17,7 +17,6 @@ export class DianGatewayService {
     const currentDateTime = new Date().toISOString().split('.')[0]; // YYYY-MM-DDTHH:MM:SS format
     const currentTime = new Date().toISOString().split('T')[1].split('.')[0]; // HH:MM:SS format
 
-
   }
 
 }

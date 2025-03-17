@@ -1,6 +1,4 @@
 import { Request, Response } from "express";
-
-
 import { DianGatewayService } from "./diangateway.service";
 import { CustomError } from "../domain/errors/customError";
 
