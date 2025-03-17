@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
 
-import { CustomError } from "../domain";
+
 import { DianGatewayService } from "./diangateway.service";
+import { CustomError } from "../domain/errors/customError";
 
 export class DianGatewayController {
   constructor(
@@ -18,7 +19,7 @@ export class DianGatewayController {
   // Métodos del controlador
   createGirador = async (req: Request, res: Response) => {
     const payload = req.body;
-    const { headerDTO, crearGiradorDTO } = payload;
+    const {  } = payload;
     this.dianGatewayService
       .crearGirador()
       .then((result) => res.json(result))
@@ -28,6 +29,7 @@ export class DianGatewayController {
 
   consultGirador = async (req: Request, res: Response) => {
     const payload = req.body;
+    const {} =payload;
     await this.dianGatewayService
       .consultGirador()
       .then((result) => res.json(result))
@@ -38,7 +40,7 @@ export class DianGatewayController {
 
   pagaresFirmados = async (req: Request, res: Response) => {
     const payload = req.body;
-    const { headerDTO, consultaPagareServiceDTO } = payload;
+    const {  } = payload;
     await this.dianGatewayService
       .consultarPagares()
       .then((result) => res.json(result))
@@ -49,7 +51,7 @@ export class DianGatewayController {
   createPagare = async (req: Request, res: Response) => {
     const payload = req.body;
    
-    const { headerDTO,documentoPagareServiceDTO } = payload;
+    const {  } = payload;
     this.dianGatewayService
       .crearPagare()
       .then((result) => res.json(result))
