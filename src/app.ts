@@ -16,7 +16,7 @@ function main() {
     port: envs.PORT,
   });
   const httpServer= createServer(server.app);
-  WssService.initWss({server: httpServer});
+ // WssService.initWss({server: httpServer});
   
 server.setRoutes(AppRoutes.routes);
 

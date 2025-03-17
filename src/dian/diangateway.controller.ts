@@ -20,7 +20,7 @@ export class DianGatewayController {
     const payload = req.body;
     const { headerDTO, crearGiradorDTO } = payload;
     this.dianGatewayService
-      .crearGirador(headerDTO, crearGiradorDTO)
+      .crearGirador()
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
   };
@@ -29,7 +29,7 @@ export class DianGatewayController {
   consultGirador = async (req: Request, res: Response) => {
     const payload = req.body;
     await this.dianGatewayService
-      .consultGirador(payload)
+      .consultGirador()
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
   };
@@ -40,7 +40,7 @@ export class DianGatewayController {
     const payload = req.body;
     const { headerDTO, consultaPagareServiceDTO } = payload;
     await this.dianGatewayService
-      .consultarPagares(headerDTO,consultaPagareServiceDTO)
+      .consultarPagares()
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
   };
@@ -51,7 +51,7 @@ export class DianGatewayController {
    
     const { headerDTO,documentoPagareServiceDTO } = payload;
     this.dianGatewayService
-      .crearPagare(headerDTO, documentoPagareServiceDTO)
+      .crearPagare()
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
   };
