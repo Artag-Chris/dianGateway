@@ -14,6 +14,8 @@ export class DianGatewayService {
   async createFactura(
     payload: any
   ): Promise<any> {
+
+    //metodos para calcular los valores
     const currentDateTime = new Date().toISOString().split('.')[0]; // YYYY-MM-DDTHH:MM:SS format
     const currentTime = new Date().toISOString().split('T')[1].split('.')[0]; // HH:MM:SS format
     console.log(payload)
@@ -24,6 +26,8 @@ export class DianGatewayService {
       })
 
       console.log(response.data)
+
+      //manejo de la espuesta  se hara un parse de xml a json 
       return 'ok'
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -36,7 +40,7 @@ export class DianGatewayService {
       } else {
         console.error('Error desconocido:', error);
       }
-      throw new Error(`Error al comunicarse con el proxy: ${String(error)}`);
+      throw new Error(`Error al comunicarse con la Dian ${String(error)}`);
     }
 
   }
