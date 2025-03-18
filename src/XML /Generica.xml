@@ -14,21 +14,21 @@
          <ext:ExtensionContent>
             <sts:DianExtensions>
                <sts:InvoiceControl>
-            <!-- numero de autorizacion o codigo de la resolucion otorgada para la numeracion -->
+                  <!-- numero de autorizacion o codigo de la resolucion otorgada para la numeracion -->
                   <sts:InvoiceAuthorization>18760000001</sts:InvoiceAuthorization>
                   <sts:AuthorizationPeriod>
                      <cbc:StartDate>2019-01-19</cbc:StartDate>
                      <cbc:EndDate>2030-01-19</cbc:EndDate>
                   </sts:AuthorizationPeriod>
                   <sts:AuthorizedInvoices>
-                  <!-- grupo de informacion del rango de numeracion autorizado para nosotros -->
+                     <!-- grupo de informacion del rango de numeracion autorizado para nosotros -->
                      <sts:Prefix>SETP</sts:Prefix>
                      <sts:From>990000000</sts:From>
                      <sts:To>995000000</sts:To>
                   </sts:AuthorizedInvoices>
                </sts:InvoiceControl>
                <sts:InvoiceSource>
-               <!-- por defecto siempre igual -->
+                  <!-- por defecto siempre igual -->
                   <cbc:IdentificationCode listAgencyID="6"
                      listAgencyName="United Nations Economic Commission for Europe"
                      listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1">
@@ -55,23 +55,18 @@
                   a8d18e4e5aa00b44a0b1f9ef413ad8215116bd3ce91730d580eaed795c83b5a32fe6f0823abc71400b3d59eb542b7de8
                </sts:SoftwareSecurityCode>
                <sts:AuthorizationProvider>
-               <!-- Huella del software que autorizó la DIAN al
+                  <!-- Huella del software que autorizó la DIAN al
                SoftwareSecurit
                Obligado a Facturar Electrónicamente o al E
                y Code Proveedor Tecnológico -->
                   <sts:AuthorizationProviderID schemeAgencyID="195"
                      schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
                      schemeID="4" schemeName="31">
-                     <!-- nit de nostros -->
-                     800197268</sts:AuthorizationProviderID>
+                     <!-- nit de nostros --> 800197268</sts:AuthorizationProviderID>
                </sts:AuthorizationProvider>
                <sts:QRCode>
-               <!-- codigo QR que no se como hacer aun -->
-                  NroFactura=SETP990000002
-                  NitFacturador=800197268
-                  NitAdquiriente=900108281
-                  FechaFactura=2019-06-20
-                  ValorTotalFactura=14024.07
+                  <!-- codigo QR que no se como hacer aun --> NroFactura=SETP990000002 NitFacturador=800197268
+                  NitAdquiriente=900108281 FechaFactura=2019-06-20 ValorTotalFactura=14024.07
                   CUFE=941cf36af62dbbc06f105d2a80e9bfe683a90e84960eae4d351cc3afbe8f848c26c39bac4fbc80fa254824c6369ea694
                   URL=https://catalogo-vpfe-hab.dian.gov.co/Document/FindDocument?documentKey=941cf36af62dbbc06f105d2a80e9bfe683a90e84960eae4d351cc3afbe8f848c26c39bac4fbc80fa254824c6369ea694&amp;partitionKey=co|06|94&amp;emissionDate=20190620</sts:QRCode>
             </sts:DianExtensions>
@@ -80,10 +75,11 @@
 
       <ext:UBLExtension>
          <ext:ExtensionContent>
-         <!-- minimo se debe usar una extencion de la dian -->
+            <!-- minimo se debe usar una extencion de la dian -->
             <ds:Signature Id="xmldsig-d0322c4f-be87-495a-95d5-9244980495f4">
                <ds:SignedInfo>
-               <!-- se debe dejar quieto estos campos a menos que se quiera cambiar el algoritmo de sifrado -->
+                  <!-- se debe dejar quieto estos campos a menos que se quiera cambiar el algoritmo
+                  de sifrado -->
                   <ds:CanonicalizationMethod
                      Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
                   <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
@@ -105,7 +101,8 @@
                      <ds:DigestValue>hpIsyD/08hVUc1exnfEyhGyKX5s3pUPbpMKmPhkPPqU=</ds:DigestValue>
                   </ds:Reference>
                </ds:SignedInfo>
-               <!-- no se si es un numero de factura que incluye un prefijo + un consecutivo autorizado -->
+               <!-- no se si es un numero de factura que incluye un prefijo + un consecutivo
+               autorizado -->
                <ds:SignatureValue Id="xmldsig-d0322c4f-be87-495a-95d5-9244980495f4-sigvalue">
                   q4HWeb47oLdDM4D3YiYDOSXE4YfSHkQKxUfSYiEiPuP2XWvD7ELZTC4ENFv6krgDAXczmi0W7OMi
                   LIVvuFz0ohPUc4KNlUEzqSBHVi6sC34sCqoxuRzOmMEoCB9Tr4VICxU1Ue9XhgP7o6X4f8KFAQWW
@@ -116,7 +113,7 @@
                <ds:KeyInfo Id="xmldsig-87d128b5-aa31-4f0b-8e45-3d9cfa0eec26-keyinfo">
                   <ds:X509Data>
                      <ds:X509Certificate>
-                     <!-- certificado que es enviado en el xml -->
+                        <!-- certificado que es enviado en el xml -->
                         MIIIODCCBiCgAwIBAgIIbAsHYmJtoOIwDQYJKoZIhvcNAQELBQAwgbQxIzAhBgkqhkiG9w0BCQEW
                         FGluZm9AYW5kZXNzY2QuY29tLmNvMSMwIQYDVQQDExpDQSBBTkRFUyBTQ0QgUy5BLiBDbGFzZSBJ
                         STEwMC4GA1UECxMnRGl2aXNpb24gZGUgY2VydGlmaWNhY2lvbiBlbnRpZGFkIGZpbmFsMRMwEQYD
@@ -153,8 +150,7 @@
                         tFEFRaD3W3aD7vwHEVsq2jTeYInE0+7r2/xYFZ9biLBrryl+q22zM5W/EJq6EJPQ6SM/eLqkpzqM
                         EF5OdcJ5kIOxLbrIdOh0+grU2IrmHXr7cWNP6MScSL7KSxhjPJ20F6eqkO1Z/LAxqNslBIKkYS24
                         VxPbXu0pBXQvu+zAwD4SvQntIG45y/67h884I/tzYOEJi7f6/NFAEuV+lokw/1MoVsEgFESASI9s
-                        N0DfUniabyrZ3nX+LG3UFL1VDtDPWrLTNKtb4wkKwGVwqtAdGFcE+/r/1WG0eQ64xCq0NLutCxg=
-                     </ds:X509Certificate>
+                        N0DfUniabyrZ3nX+LG3UFL1VDtDPWrLTNKtb4wkKwGVwqtAdGFcE+/r/1WG0eQ64xCq0NLutCxg= </ds:X509Certificate>
                   </ds:X509Data>
                </ds:KeyInfo>
                <ds:Object>
@@ -234,16 +230,25 @@
          </ext:ExtensionContent>
       </ext:UBLExtension>
    </ext:UBLExtensions>
+   <!-- no se puede mover -->
    <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+   <!-- no se puede mover -->
    <cbc:CustomizationID>05</cbc:CustomizationID>
+   <!-- version del formato de la dian -->
    <cbc:ProfileID>DIAN 2.1</cbc:ProfileID>
+   <!-- este codigo es el testigo con el valor del registro de cbc:UUID.@schemeID si son iguales confirma y si son desiguales rechaza -->
    <cbc:ProfileExecutionID>2</cbc:ProfileExecutionID>
+   <!-- este es el numero de la factura incluye un prefijo + un consecutivo -->
    <cbc:ID>SETP990000002</cbc:ID>
    <cbc:UUID schemeID="2" schemeName="CUFE-SHA384">
       941cf36af62dbbc06f105d2a80e9bfe683a90e84960eae4d351cc3afbe8f848c26c39bac4fbc80fa254824c6369ea694</cbc:UUID>
+      <!-- fecha de edicion de la factura -->
    <cbc:IssueDate>2019-06-20</cbc:IssueDate>
+   <!-- hora de la edicion -->
    <cbc:IssueTime>09:15:23-05:00</cbc:IssueTime>
+   <!-- tipo de factura tocara ver en el excel por si se quiere cambiar de tipo de factura -->
    <cbc:InvoiceTypeCode>01</cbc:InvoiceTypeCode>
+   <!-- comentario libre en el espacio de facturacion -->
    <cbc:Note>
       SETP9900000022019-06-2009:15:23-05:0012600.06012424.01040.00030.0014024.07900508908900108281fc8eac422eba16e22ffd8c6f94b3f40a6e38162c2</cbc:Note>
    <cbc:DocumentCurrencyCode listAgencyID="6"
