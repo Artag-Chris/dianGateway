@@ -1,6 +1,5 @@
 export function LastInvoiceLine(payload:any):string{
-    return`
-    <cac:InvoiceLine>
+    return`<cac:InvoiceLine>
       <cbc:ID>2</cbc:ID>
       <cbc:InvoicedQuantity unitCode="NIU">1.000000</cbc:InvoicedQuantity>
       <cbc:LineExtensionAmount currencyID="COP">0.00</cbc:LineExtensionAmount>

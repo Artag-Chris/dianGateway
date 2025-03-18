@@ -1,7 +1,6 @@
 //referente a los medios de pago y los impuestos
 export function PaymentMeans(payload:any):string{
-    return`
-    <cac:PaymentMeans>
+    return`<cac:PaymentMeans>
       <!-- Grupo de campos para información relacionadas con el pago de la factura -->
       <!-- Formas de pago demas que se debera hacer alguna conversion de campos parametricos -->
       <cbc:ID>2</cbc:ID>

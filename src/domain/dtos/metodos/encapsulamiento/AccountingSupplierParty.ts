@@ -2,8 +2,7 @@
 
 export function AccountingSupplierParty(payload:any):string{
 
-    return`
-    <cac:AccountingSupplierParty>
+    return`<cac:AccountingSupplierParty>
    <!-- identificador de la organizacion juridica de la persona -->
       <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
       <cac:Party>

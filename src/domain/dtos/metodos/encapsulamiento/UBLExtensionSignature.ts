@@ -3,8 +3,7 @@
 
 export function UBLExtensionSignature(payload:any):any{
 
-    return `
-    <ext:UBLExtension>
+    return `<ext:UBLExtension>
          <ext:ExtensionContent>
             <!-- minimo se debe usar una extencion de la dian -->
             <ds:Signature Id="xmldsig-d0322c4f-be87-495a-95d5-9244980495f4">

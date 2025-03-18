@@ -3,8 +3,7 @@
 
 export function UBLExtensionDianExtentions(payload:any):any {
 console.log(payload);
-    return`
-<ext:UBLExtension>
+    return`<ext:UBLExtension>
          <ext:ExtensionContent>
             <sts:DianExtensions>
                <sts:InvoiceControl>

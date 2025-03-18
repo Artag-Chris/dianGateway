@@ -2,8 +2,7 @@
 
 export function CBCcampos(payload:any):any{
 
-return`
- <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+return`<cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
    <!-- no se puede mover -->
    <cbc:CustomizationID>05</cbc:CustomizationID>
    <!-- version del formato de la dian -->

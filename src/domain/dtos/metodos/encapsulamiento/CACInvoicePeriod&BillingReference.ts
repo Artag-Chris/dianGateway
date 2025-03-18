@@ -1,6 +1,5 @@
 export function CacInvoicePeriodAndBillingReference(payload: any): string {
-    return `
-    <cac:InvoicePeriod>
+    return `<cac:InvoicePeriod>
       <cbc:StartDate>2019-05-01</cbc:StartDate>
       <cbc:EndDate>2019-05-30</cbc:EndDate>
    </cac:InvoicePeriod>

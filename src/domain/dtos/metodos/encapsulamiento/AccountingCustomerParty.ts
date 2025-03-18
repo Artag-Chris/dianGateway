@@ -2,8 +2,7 @@
 
 export function AccountingCustomerParty(payload:any):string{
 
-    return`
-    <cac:AccountingCustomerParty>
+    return`<cac:AccountingCustomerParty>
    <!-- Identificador de tipo de persona  lo mismo que deceval aunque mirar documentacion por si cambian los campos parametricos-->
       <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
       <cac:Party>

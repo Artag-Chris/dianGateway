@@ -1,7 +1,6 @@
 //referente a el envio y transporte de productos no creo que lo usemos
 export function CacDelivery(payload:any):string{
-    return`
-    <cac:Delivery>
+    return`<cac:Delivery>
    <!-- referente a la entrega de vienes mercancia y esas cosas se coloco el nombre de la empresa que entrega -->
       <cac:DeliveryAddress>
          <cbc:ID>11001</cbc:ID>
