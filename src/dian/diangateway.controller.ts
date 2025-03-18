@@ -19,7 +19,7 @@ export class DianGatewayController {
     const payload = req.body;
     const {  } = payload;
     this.dianGatewayService
-      .createFactura()
+      .createFactura(payload)
       .then((result) => res.json(result))
       .catch((error) => this.handleError(error, res));
   };
