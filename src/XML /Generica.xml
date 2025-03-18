@@ -236,13 +236,14 @@
    <cbc:CustomizationID>05</cbc:CustomizationID>
    <!-- version del formato de la dian -->
    <cbc:ProfileID>DIAN 2.1</cbc:ProfileID>
-   <!-- este codigo es el testigo con el valor del registro de cbc:UUID.@schemeID si son iguales confirma y si son desiguales rechaza -->
+   <!-- este codigo es el testigo con el valor del registro de cbc:UUID.@schemeID si son iguales
+   confirma y si son desiguales rechaza -->
    <cbc:ProfileExecutionID>2</cbc:ProfileExecutionID>
    <!-- este es el numero de la factura incluye un prefijo + un consecutivo -->
    <cbc:ID>SETP990000002</cbc:ID>
    <cbc:UUID schemeID="2" schemeName="CUFE-SHA384">
       941cf36af62dbbc06f105d2a80e9bfe683a90e84960eae4d351cc3afbe8f848c26c39bac4fbc80fa254824c6369ea694</cbc:UUID>
-      <!-- fecha de edicion de la factura -->
+   <!-- fecha de edicion de la factura -->
    <cbc:IssueDate>2019-06-20</cbc:IssueDate>
    <!-- hora de la edicion -->
    <cbc:IssueTime>09:15:23-05:00</cbc:IssueTime>
@@ -251,11 +252,13 @@
    <!-- comentario libre en el espacio de facturacion -->
    <cbc:Note>
       SETP9900000022019-06-2009:15:23-05:0012600.06012424.01040.00030.0014024.07900508908900108281fc8eac422eba16e22ffd8c6f94b3f40a6e38162c2</cbc:Note>
-      <!-- esta es la divisa de la factura aqui se debera ver el excel para cuadrar codigos o colocarla por defecto -->
+   <!-- esta es la divisa de la factura aqui se debera ver el excel para cuadrar codigos o colocarla
+   por defecto -->
    <cbc:DocumentCurrencyCode listAgencyID="6"
       listAgencyName="United Nations Economic Commission for Europe" listID="ISO 4217 Alpha">COP</cbc:DocumentCurrencyCode>
    <cbc:LineCountNumeric>2</cbc:LineCountNumeric>
-   <!-- estos campos de abajo son por ejemplo el tipo de facturacion de servicios publicos de una fecha a otra -->
+   <!-- estos campos de abajo son por ejemplo el tipo de facturacion de servicios publicos de una
+   fecha a otra -->
    <cac:InvoicePeriod>
       <cbc:StartDate>2019-05-01</cbc:StartDate>
       <cbc:EndDate>2019-05-30</cbc:EndDate>
@@ -280,11 +283,11 @@
       </cac:InvoiceDocumentReference>
    </cac:BillingReference>
    <cac:AccountingSupplierParty>
-   <!-- identificador de la organizacion juridica de la persona -->
+      <!-- identificador de la organizacion juridica de la persona -->
       <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
       <cac:Party>
          <cac:PartyName>
-         <!-- nombre comercial del emisor  tal cual esta en el rut-->
+            <!-- nombre comercial del emisor  tal cual esta en el rut-->
             <cbc:Name>Nombre Tienda</cbc:Name>
          </cac:PartyName>
          <cac:PartyName>
@@ -295,7 +298,7 @@
          </cac:PartyName>
          <cac:PhysicalLocation>
             <cac:Address>
-            <!-- codigo del municipio donde se genera la factura usar el excel para codificar -->
+               <!-- codigo del municipio donde se genera la factura usar el excel para codificar -->
                <cbc:ID>11001</cbc:ID>
                <cbc:CityName>Bogotá, D.c. </cbc:CityName>
                <cbc:CountrySubentity>Bogotá</cbc:CountrySubentity>
@@ -314,16 +317,13 @@
             <cbc:CompanyID schemeAgencyID="195"
                schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
                schemeID="4" schemeName="31">
-               <!-- nit del emisor -->
-               800197268</cbc:CompanyID>
+               <!-- nit del emisor --> 800197268</cbc:CompanyID>
             <cbc:TaxLevelCode listName="05">
-             <!-- Obligaciones o responsabilidades del
+               <!-- Obligaciones o responsabilidades del
             contribuyente; incluye el régimen al que
-            pertenece el emisor -->
-            O-99
-            </cbc:TaxLevelCode>
+            pertenece el emisor --> O-99 </cbc:TaxLevelCode>
             <cac:RegistrationAddress>
-            <!-- direccion fisica -->
+               <!-- direccion fisica -->
                <cbc:ID>11001</cbc:ID>
                <cbc:CityName>Bogotá, D.c. </cbc:CityName>
                <cbc:CountrySubentity>Bogotá</cbc:CountrySubentity>
@@ -337,15 +337,15 @@
                </cac:Country>
             </cac:RegistrationAddress>
             <cac:TaxScheme>
-            <!-- dentificador del tributo -->
+               <!-- dentificador del tributo -->
                <cbc:ID>01</cbc:ID>
                <!-- nombre del impuesto -->
                <cbc:Name>IVA</cbc:Name>
             </cac:TaxScheme>
          </cac:PartyTaxScheme>
          <cac:PartyLegalEntity>
-         <!-- Grupo de información legales del emisor -->
-         <!-- Nombre registrado en el RUT. Si el emisor persona jurídica
+            <!-- Grupo de información legales del emisor -->
+            <!-- Nombre registrado en el RUT. Si el emisor persona jurídica
           desea también utilizar el nombre comercial en el archivo
           /Invoice/cac:AccountingSupplierParty/cac
           de la factura, debe utilizar el elemento -->
@@ -353,17 +353,16 @@
             <cbc:CompanyID schemeAgencyID="195"
                schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
                schemeID="9" schemeName="31">
-               <!-- nit emisor -->
-               800197268</cbc:CompanyID>
+               <!-- nit emisor --> 800197268</cbc:CompanyID>
             <cac:CorporateRegistrationScheme>
-             <!-- aqui ira el prefijo de la facturacion aqui se cambia -->
+               <!-- aqui ira el prefijo de la facturacion aqui se cambia -->
                <cbc:ID>SETP</cbc:ID>
                <!-- Número de matrícula mercantil -->
                <cbc:Name>10181</cbc:Name>
             </cac:CorporateRegistrationScheme>
          </cac:PartyLegalEntity>
          <cac:Contact>
-         <!-- Grupo de detalles con información de
+            <!-- Grupo de detalles con información de
             contacto del emsior -->
             <cbc:Name>Eric Valencia</cbc:Name>
             <cbc:Telephone>6111111</cbc:Telephone>
@@ -373,23 +372,25 @@
       </cac:Party>
    </cac:AccountingSupplierParty>
    <cac:AccountingCustomerParty>
-   <!-- Identificador de tipo de persona  lo mismo que deceval aunque mirar documentacion por si cambian los campos parametricos-->
+      <!-- Identificador de tipo de persona  lo mismo que deceval aunque mirar documentacion por si
+      cambian los campos parametricos-->
       <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
       <cac:Party>
-      <!-- Grupo con información generales sobre el adquiriente o del que recibe la factura -->
-      <!-- hay un campo de id que no aparece aqui pero es referente al documento por ejemplo si es uno tipo C.C seria 1088261233 -->
+         <!-- Grupo con información generales sobre el adquiriente o del que recibe la factura -->
+         <!-- hay un campo de id que no aparece aqui pero es referente al documento por ejemplo si
+         es uno tipo C.C seria 1088261233 -->
          <cac:PartyName>
             <cbc:Name>OPTICAS GMO COLOMBIA S A S</cbc:Name>
          </cac:PartyName>
          <cac:PhysicalLocation>
-         <!-- informacion fisica del que adquiere -->
+            <!-- informacion fisica del que adquiere -->
             <cac:Address>
                <cbc:ID>11001</cbc:ID>
                <cbc:CityName>Bogotá, D.c. </cbc:CityName>
                <cbc:CountrySubentity>Bogotá</cbc:CountrySubentity>
                <cbc:CountrySubentityCode>11</cbc:CountrySubentityCode>
                <cac:AddressLine>
-               <!-- es de campo libre no hay normas para escribir la direccion del adquiriente -->
+                  <!-- es de campo libre no hay normas para escribir la direccion del adquiriente -->
                   <cbc:Line>CARRERA 8 No 20-14/40</cbc:Line>
                </cac:AddressLine>
                <cac:Country>
@@ -399,7 +400,7 @@
             </cac:Address>
          </cac:PhysicalLocation>
          <cac:PartyTaxScheme>
-         <!-- referente al que adquiere o a quien se le da la factura -->
+            <!-- referente al que adquiere o a quien se le da la factura -->
             <cbc:RegistrationName>OPTICAS GMO COLOMBIA S A S</cbc:RegistrationName>
             <cbc:CompanyID schemeAgencyID="195"
                schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
@@ -419,7 +420,7 @@
                </cac:Country>
             </cac:RegistrationAddress>
             <cac:TaxScheme>
-            <!-- se queda quieto si el impuesto es iva claro -->
+               <!-- se queda quieto si el impuesto es iva claro -->
                <cbc:ID>01</cbc:ID>
                <cbc:Name>IVA</cbc:Name>
             </cac:TaxScheme>
@@ -434,7 +435,7 @@
             </cac:CorporateRegistrationScheme>
          </cac:PartyLegalEntity>
          <cac:Contact>
-         <!-- persona a la que se le dio la factura -->
+            <!-- persona a la que se le dio la factura -->
             <cbc:Name>Diana Cruz</cbc:Name>
             <cbc:Telephone>31031031089</cbc:Telephone>
             <cbc:ElectronicMail>dcruz@empresa.org</cbc:ElectronicMail>
@@ -449,7 +450,8 @@
       </cac:PartyIdentification>
    </cac:TaxRepresentativeParty>
    <cac:Delivery>
-   <!-- referente a la entrega de vienes mercancia y esas cosas se coloco el nombre de la empresa que entrega -->
+      <!-- referente a la entrega de vienes mercancia y esas cosas se coloco el nombre de la empresa
+      que entrega -->
       <cac:DeliveryAddress>
          <cbc:ID>11001</cbc:ID>
          <cbc:CityName>Bogotá, D.c. </cbc:CityName>
@@ -503,7 +505,7 @@
             </cac:CorporateRegistrationScheme>
          </cac:PartyLegalEntity>
          <cac:Contact>
-         <!-- nombre de la persona que recibio la mercancia  el transportador-->
+            <!-- nombre de la persona que recibio la mercancia  el transportador-->
             <cbc:Name>Eric Van Boxsom</cbc:Name>
             <cbc:Telephone>9712311</cbc:Telephone>
             <cbc:Telefax>12431241</cbc:Telefax>
@@ -513,8 +515,8 @@
       </cac:DeliveryParty>
    </cac:Delivery>
    <cac:DeliveryTerms>
-   <!-- Grupo para información relacionadas con la entrega -->
-   <!-- Método de pago de costes de transporte:
+      <!-- Grupo para información relacionadas con la entrega -->
+      <!-- Método de pago de costes de transporte:
      Se utilizar para indicar cómo se pagan los
      costes del transporte (por ejemplo, Portes
      Debidos, Portes Pagados) Puede ser un
@@ -523,12 +525,13 @@
       <cbc:SpecialTerms>Portes Pagados</cbc:SpecialTerms>
       <!-- Código correspondiente al medio de pago -->
       <cbc:LossRiskResponsibilityCode>CFR</cbc:LossRiskResponsibilityCode>
-      <!-- no usado por la DIAN se puede omitir o colocar algo referente a la factura pero sobre el transporte -->
+      <!-- no usado por la DIAN se puede omitir o colocar algo referente a la factura pero sobre el
+      transporte -->
       <cbc:LossRisk>Costo y Flete</cbc:LossRisk>
    </cac:DeliveryTerms>
    <cac:PaymentMeans>
-   <!-- Grupo de campos para información relacionadas con el pago de la factura -->
-   <!-- Formas de pago demas que se debera hacer alguna conversion de campos parametricos -->
+      <!-- Grupo de campos para información relacionadas con el pago de la factura -->
+      <!-- Formas de pago demas que se debera hacer alguna conversion de campos parametricos -->
       <cbc:ID>2</cbc:ID>
       <!-- Código correspondiente al medio de pago -->
       <cbc:PaymentMeansCode>41</cbc:PaymentMeansCode>
@@ -537,7 +540,7 @@
       <cbc:PaymentID>1234</cbc:PaymentID>
    </cac:PaymentMeans>
    <cac:PrepaidPayment>
-   <!-- esto es en referente a un anticipo  -->
+      <!-- esto es en referente a un anticipo  -->
       <cbc:ID>SFR3123856</cbc:ID>
       <cbc:PaidAmount currencyID="COP">1000.00</cbc:PaidAmount>
       <cbc:ReceivedDate>2018-09-29</cbc:ReceivedDate>
@@ -545,13 +548,13 @@
       <cbc:InstructionID>Prepago recibido</cbc:InstructionID>
    </cac:PrepaidPayment>
    <cac:TaxTotal>
-   <!-- Grupo de campos para información totales relacionadas con un tributo -->
-   <!-- valor del trubuto : IVA -->
+      <!-- Grupo de campos para información totales relacionadas con un tributo -->
+      <!-- valor del trubuto : IVA -->
       <cbc:TaxAmount currencyID="COP">2424.01</cbc:TaxAmount>
       <cac:TaxSubtotal>
-      <!-- Grupo de información que definen los
+         <!-- Grupo de información que definen los
        valores del tributo -->
-       <!-- Base Imponible sobre la que se calcula el
+         <!-- Base Imponible sobre la que se calcula el
         valor del tributo 
         En el caso de que el tributo sea una porcentaje del valor
         tributable: informar la base imponible en valor monetario.
@@ -608,7 +611,7 @@
       </cac:TaxSubtotal>
    </cac:TaxTotal>
    <cac:LegalMonetaryTotal>
-    <!-- Total valor bruto, suma de los valores
+      <!-- Total valor bruto, suma de los valores
      brutos de las líneas de la factura.
      sin calcular los impuestos aun -->
       <cbc:LineExtensionAmount currencyID="COP">12600.06</cbc:LineExtensionAmount>
@@ -635,7 +638,8 @@
          </cac:DeliveryLocation>
       </cac:Delivery>
       <cac:AllowanceCharge>
-      <!-- Indica que el elemento es un Cargo y no un descuento mejor dicho si tiene costos extra por x razon -->
+         <!-- Indica que el elemento es un Cargo y no un descuento mejor dicho si tiene costos extra
+         por x razon -->
          <cbc:ID>1</cbc:ID>
          <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
          <!-- texto libre para informar por que es un descuento no un cargo extra -->
@@ -645,7 +649,7 @@
          <cbc:BaseAmount currencyID="COP">18900.00</cbc:BaseAmount>
       </cac:AllowanceCharge>
       <cac:TaxTotal>
-      <!-- Grupo de campos para información
+         <!-- Grupo de campos para información
        relacionadas con un tributo aplicable a esta 
        línea de la factura -->
          <cbc:TaxAmount currencyID="COP">2394.01</cbc:TaxAmount>
@@ -653,7 +657,7 @@
             <cbc:TaxableAmount currencyID="COP">12600.06</cbc:TaxableAmount>
             <cbc:TaxAmount currencyID="COP">2394.01</cbc:TaxAmount>
             <cac:TaxCategory>
-            <!-- porcentaje del iva o del impuesto -->
+               <!-- porcentaje del iva o del impuesto -->
                <cbc:Percent>19.00</cbc:Percent>
                <cac:TaxScheme>
                   <cbc:ID>01</cbc:ID>
@@ -663,20 +667,20 @@
          </cac:TaxSubtotal>
       </cac:TaxTotal>
       <cac:Item>
-      <!-- Grupo de información que describen las características del artículo o servicio -->
-      <!-- descripcion del objeto o servicio -->
+         <!-- Grupo de información que describen las características del artículo o servicio -->
+         <!-- descripcion del objeto o servicio -->
          <cbc:Description>AV OASYS -2.25 (8.4) LENTE DE CONTATO</cbc:Description>
          <cac:SellersItemIdentification>
-         <!-- Código del vendedor correspondiente al artículo -->
+            <!-- Código del vendedor correspondiente al artículo -->
             <cbc:ID>AOHV84-225</cbc:ID>
          </cac:SellersItemIdentification>
          <cac:AdditionalItemIdentification>
-         <!-- Código de acuerdo con el estándar descrito en el atributo ID/@schemeAgencyID -->
+            <!-- Código de acuerdo con el estándar descrito en el atributo ID/@schemeAgencyID -->
             <cbc:ID schemeID="999" schemeName="EAN13">6543542313534</cbc:ID>
          </cac:AdditionalItemIdentification>
       </cac:Item>
       <cac:Price>
-      <!-- referente al precio y la cantidad -->
+         <!-- referente al precio y la cantidad -->
          <cbc:PriceAmount currencyID="COP">18900.00</cbc:PriceAmount>
          <cbc:BaseQuantity unitCode="EA">1.000000</cbc:BaseQuantity>
       </cac:Price>
