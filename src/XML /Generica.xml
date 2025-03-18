@@ -251,13 +251,17 @@
    <!-- comentario libre en el espacio de facturacion -->
    <cbc:Note>
       SETP9900000022019-06-2009:15:23-05:0012600.06012424.01040.00030.0014024.07900508908900108281fc8eac422eba16e22ffd8c6f94b3f40a6e38162c2</cbc:Note>
+      <!-- esta es la divisa de la factura aqui se debera ver el excel para cuadrar codigos o colocarla por defecto -->
    <cbc:DocumentCurrencyCode listAgencyID="6"
       listAgencyName="United Nations Economic Commission for Europe" listID="ISO 4217 Alpha">COP</cbc:DocumentCurrencyCode>
    <cbc:LineCountNumeric>2</cbc:LineCountNumeric>
+   <!-- estos campos de abajo son por ejemplo el tipo de facturacion de servicios publicos de una fecha a otra -->
    <cac:InvoicePeriod>
       <cbc:StartDate>2019-05-01</cbc:StartDate>
       <cbc:EndDate>2019-05-30</cbc:EndDate>
    </cac:InvoicePeriod>
+   <!-- esto hace referencia a la nota de credito que dio origen a la factura de credito
+   se coloca que si es prepago o postpago etc -->
    <cac:BillingReference>
       <cac:InvoiceDocumentReference>
          <cbc:ID>SFR3123856</cbc:ID>
@@ -276,9 +280,11 @@
       </cac:InvoiceDocumentReference>
    </cac:BillingReference>
    <cac:AccountingSupplierParty>
+   <!-- identificador de la organizacion juridica de la persona -->
       <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
       <cac:Party>
          <cac:PartyName>
+         <!-- nombre comercial del emisor  tal cual esta en el rut-->
             <cbc:Name>Nombre Tienda</cbc:Name>
          </cac:PartyName>
          <cac:PartyName>
@@ -289,6 +295,7 @@
          </cac:PartyName>
          <cac:PhysicalLocation>
             <cac:Address>
+            <!-- codigo del municipio donde se genera la factura usar el excel para codificar -->
                <cbc:ID>11001</cbc:ID>
                <cbc:CityName>Bogotá, D.c. </cbc:CityName>
                <cbc:CountrySubentity>Bogotá</cbc:CountrySubentity>
@@ -306,9 +313,17 @@
             <cbc:RegistrationName>DIAN</cbc:RegistrationName>
             <cbc:CompanyID schemeAgencyID="195"
                schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
-               schemeID="4" schemeName="31">800197268</cbc:CompanyID>
-            <cbc:TaxLevelCode listName="05">O-99</cbc:TaxLevelCode>
+               schemeID="4" schemeName="31">
+               <!-- nit del emisor -->
+               800197268</cbc:CompanyID>
+            <cbc:TaxLevelCode listName="05">
+             <!-- Obligaciones o responsabilidades del
+            contribuyente; incluye el régimen al que
+            pertenece el emisor -->
+            O-99
+            </cbc:TaxLevelCode>
             <cac:RegistrationAddress>
+            <!-- direccion fisica -->
                <cbc:ID>11001</cbc:ID>
                <cbc:CityName>Bogotá, D.c. </cbc:CityName>
                <cbc:CountrySubentity>Bogotá</cbc:CountrySubentity>
@@ -322,21 +337,34 @@
                </cac:Country>
             </cac:RegistrationAddress>
             <cac:TaxScheme>
+            <!-- dentificador del tributo -->
                <cbc:ID>01</cbc:ID>
+               <!-- nombre del impuesto -->
                <cbc:Name>IVA</cbc:Name>
             </cac:TaxScheme>
          </cac:PartyTaxScheme>
          <cac:PartyLegalEntity>
+         <!-- Grupo de información legales del emisor -->
+         <!-- Nombre registrado en el RUT. Si el emisor persona jurídica
+          desea también utilizar el nombre comercial en el archivo
+          /Invoice/cac:AccountingSupplierParty/cac
+          de la factura, debe utilizar el elemento -->
             <cbc:RegistrationName>DIAN</cbc:RegistrationName>
             <cbc:CompanyID schemeAgencyID="195"
                schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
-               schemeID="9" schemeName="31">800197268</cbc:CompanyID>
+               schemeID="9" schemeName="31">
+               <!-- nit emisor -->
+               800197268</cbc:CompanyID>
             <cac:CorporateRegistrationScheme>
+             <!-- aqui ira el prefijo de la facturacion aqui se cambia -->
                <cbc:ID>SETP</cbc:ID>
+               <!-- Número de matrícula mercantil -->
                <cbc:Name>10181</cbc:Name>
             </cac:CorporateRegistrationScheme>
          </cac:PartyLegalEntity>
          <cac:Contact>
+         <!-- Grupo de detalles con información de
+            contacto del emsior -->
             <cbc:Name>Eric Valencia</cbc:Name>
             <cbc:Telephone>6111111</cbc:Telephone>
             <cbc:ElectronicMail>eric.valencia@ket.co</cbc:ElectronicMail>
@@ -345,18 +373,23 @@
       </cac:Party>
    </cac:AccountingSupplierParty>
    <cac:AccountingCustomerParty>
+   <!-- Identificador de tipo de persona  lo mismo que deceval aunque mirar documentacion por si cambian los campos parametricos-->
       <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
       <cac:Party>
+      <!-- Grupo con información generales sobre el adquiriente o del que recibe la factura -->
+      <!-- hay un campo de id que no aparece aqui pero es referente al documento por ejemplo si es uno tipo C.C seria 1088261233 -->
          <cac:PartyName>
             <cbc:Name>OPTICAS GMO COLOMBIA S A S</cbc:Name>
          </cac:PartyName>
          <cac:PhysicalLocation>
+         <!-- informacion fisica del que adquiere -->
             <cac:Address>
                <cbc:ID>11001</cbc:ID>
                <cbc:CityName>Bogotá, D.c. </cbc:CityName>
                <cbc:CountrySubentity>Bogotá</cbc:CountrySubentity>
                <cbc:CountrySubentityCode>11</cbc:CountrySubentityCode>
                <cac:AddressLine>
+               <!-- es de campo libre no hay normas para escribir la direccion del adquiriente -->
                   <cbc:Line>CARRERA 8 No 20-14/40</cbc:Line>
                </cac:AddressLine>
                <cac:Country>
