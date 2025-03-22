@@ -160,5 +160,5 @@ export function UBLExtensionSignature(payload:any):any{
          </ext:ExtensionContent>
       </ext:UBLExtension>
    </ext:UBLExtensions>
-    `
+    `.trim()
 }

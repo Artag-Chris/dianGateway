@@ -7,5 +7,5 @@ export function TaxRepresentativeParty(payload:any):string{
             schemeName="31">989123123</cbc:ID>
       </cac:PartyIdentification>
    </cac:TaxRepresentativeParty>
-    `
+    `.trim();
 }

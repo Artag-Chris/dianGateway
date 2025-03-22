@@ -156,5 +156,5 @@ export function PaymentMeans(payload:any):string{
          <cbc:BaseQuantity unitCode="EA">1.000000</cbc:BaseQuantity>
       </cac:Price>
    </cac:InvoiceLine>
-    `
+    `.trim();
 }

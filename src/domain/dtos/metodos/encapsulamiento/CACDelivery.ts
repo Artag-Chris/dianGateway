@@ -78,5 +78,5 @@ export function CacDelivery(payload:any):string{
       <!-- no usado por la DIAN se puede omitir o colocar algo referente a la factura pero sobre el transporte -->
       <cbc:LossRisk>Costo y Flete</cbc:LossRisk>
    </cac:DeliveryTerms>
-    `
+    `.trim();
 }

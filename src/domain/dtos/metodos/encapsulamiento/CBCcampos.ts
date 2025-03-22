@@ -27,5 +27,5 @@ return`<cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
       listAgencyName="United Nations Economic Commission for Europe" listID="ISO 4217 Alpha">COP</cbc:DocumentCurrencyCode>
    <cbc:LineCountNumeric>2</cbc:LineCountNumeric>
    <!-- estos campos de abajo son por ejemplo el tipo de facturacion de servicios publicos de una fecha a otra -->
-`
+`.trim();
 }

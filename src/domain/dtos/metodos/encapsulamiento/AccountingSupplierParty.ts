@@ -95,5 +95,5 @@ export function AccountingSupplierParty(payload:any):string{
          </cac:Contact>
       </cac:Party>
    </cac:AccountingSupplierParty>
-    `
+    `.trim();
 }

@@ -71,5 +71,5 @@ export function AccountingCustomerParty(payload:any):string{
          </cac:Contact>
       </cac:Party>
    </cac:AccountingCustomerParty>
-    `
+    `.trim();
 }

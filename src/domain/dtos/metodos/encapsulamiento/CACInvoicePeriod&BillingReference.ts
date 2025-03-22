@@ -22,5 +22,5 @@ export function CacInvoicePeriodAndBillingReference(payload: any): string {
          <cbc:DocumentDescription>Factura anterior</cbc:DocumentDescription>
       </cac:InvoiceDocumentReference>
    </cac:BillingReference>
-    `
+    `.trim()
 }

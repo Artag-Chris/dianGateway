@@ -1,20 +1,22 @@
 //aqui va lo refgerente a autorizacion de factura 
 //necesito estudiar mas esta parte
 
+import { envs } from "../../../../config/envs";
+
 export function UBLExtensionDianExtentions(payload:any):any {
 console.log(payload);
     return`<ext:UBLExtension>
          <ext:ExtensionContent>
             <sts:DianExtensions>
                <sts:InvoiceControl>
-                  <!-- numero de autorizacion o codigo de la resolucion otorgada para la numeracion -->
+                  <!-- numero de autorizacion o codigo de la resolucion otorgada para la numeracion esto lo cuadra un contador -->
                   <sts:InvoiceAuthorization>18760000001</sts:InvoiceAuthorization>
                   <sts:AuthorizationPeriod>
                      <cbc:StartDate>2019-01-19</cbc:StartDate>
                      <cbc:EndDate>2030-01-19</cbc:EndDate>
                   </sts:AuthorizationPeriod>
                   <sts:AuthorizedInvoices>
-                     <!-- grupo de informacion del rango de numeracion autorizado para nosotros -->
+                     <!-- grupo de informacion del rango de numeracion autorizado para nosotros esto lo cuadra un contador -->
                      <sts:Prefix>FINO</sts:Prefix>
                      <sts:From>990000000</sts:From>
                      <sts:To>995000000</sts:To>
@@ -41,7 +43,8 @@ console.log(payload);
                   de el programa que vamos a usar -->
                   <sts:SoftwareID schemeAgencyID="195"
                      schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">
-                     56f2ae4e-9812-4fad-9255-08fcfcd5ccb0</sts:SoftwareID>
+                      ${envs.TEST_SET_ID}
+                     </sts:SoftwareID>
                </sts:SoftwareProvider>
                <sts:SoftwareSecurityCode schemeAgencyID="195"
                   schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">
@@ -50,12 +53,12 @@ console.log(payload);
                <sts:AuthorizationProvider>
                   <!-- Huella del software que autorizó la DIAN al
                SoftwareSecurit
-               Obligado a Facturar Electrónicamente o al E
-               y Code Proveedor Tecnológico -->
+               Obligado a Facturar Electrónicamente 
+               Code Proveedor Tecnológico -->
                   <sts:AuthorizationProviderID schemeAgencyID="195"
                      schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
                      schemeID="4" schemeName="31">
-                     <!-- nit de nostros --> 800197268</sts:AuthorizationProviderID>
+                     <!-- nit de nostros --> 1088327869</sts:AuthorizationProviderID>
                </sts:AuthorizationProvider>
                <sts:QRCode>
                   <!-- codigo QR que no se como hacer aun --> NroFactura=SETP990000002 NitFacturador=800197268
@@ -65,5 +68,5 @@ console.log(payload);
             </sts:DianExtensions>
          </ext:ExtensionContent>
       </ext:UBLExtension>
-`;
+`.trim();
 }

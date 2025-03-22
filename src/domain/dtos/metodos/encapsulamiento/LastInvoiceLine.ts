@@ -54,5 +54,5 @@ export function LastInvoiceLine(payload:any):string{
          <cbc:PriceAmount currencyID="COP">0.00</cbc:PriceAmount>
          <cbc:BaseQuantity unitCode="NIU">1.000000</cbc:BaseQuantity>
       </cac:Price>
-    `
+    `.trim();
 }

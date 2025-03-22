@@ -25,5 +25,5 @@ export function facturaGenerica(payload:any):string{
       ${PaymentMeans(payload)}
       ${LastInvoiceLine(payload)}
 </Invoice>
-    `
+    `.trim();
 }

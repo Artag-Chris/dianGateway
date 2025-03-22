@@ -22,7 +22,9 @@ export class DianGatewayService {
     //return facturaGenerica(payload)
     try {
       const response = await axios.post(envs.DIAN_URL, facturaGenerica(payload), {
-        headers: { 'Content-Type': 'text/xml' },
+        headers: {
+          Accept: 'application/xml',
+          'Content-Type': 'application/xml' },
       })
 
       console.log(response.data)
@@ -31,7 +33,7 @@ export class DianGatewayService {
       return 'ok'
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        console.error('Error al comunicarse con el proxy:', {
+        console.error('Error al comunicarse con la dian:', {
           message: error.message,
           code: error.code,
           response: error.response?.data,
